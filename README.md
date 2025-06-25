@@ -72,9 +72,8 @@ Here are the planned improvements to enhance the user experience and utility:
 ---
 
 ## 🌐 GitHub Repository
-
-You can access the complete code here:  
-**[👉 GitHub Link](https://github.com/your-username/Eduportal/)** 
+ 
+**[👉 GitHub Link](https://dhairyadave08.github.io/EduPortal/)** 
 
 ---
 
