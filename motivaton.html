@@ -1,79 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Motivation - EduPortal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
-    }
-    body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #ff512f, #dd2476);
-      color: white;
-      padding: 90px 20px 40px;
+      padding: 0;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #031116, #0d2c36, #2c5364);
+      color: #f8f8f8;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 0;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
     header {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
+
     .site-name {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
     }
+
     nav a {
-      margin-left: 20px;
-      color: white;
+      margin-left: 25px;
+      color: #ccc;
       text-decoration: none;
       font-weight: 500;
+      transition: 0.3s;
     }
+
+    nav a:hover {
+      color: yellow;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
+
     h1 {
       text-align: center;
       margin-bottom: 30px;
+      font-size: 28px;
+      color: #ffd700;
     }
+
     .story {
-      background: rgba(0,0,0,0.4);
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(3px);
+      transition: 0.3s;
     }
+
     .story h2 {
       margin-top: 0;
-      color: #ffd;
+      margin-bottom: 10px;
+      color: #ffed9e;
     }
+
     .story p {
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.8;
       text-align: justify;
+      color: #f0f0f0;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #ffe;
-      background: rgba(0, 0, 0, 0.1);
+      color: #ddd;
+      background: rgba(255, 255, 255, 0.05);
       margin-top: 40px;
+      border-radius: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Balloons */
+    #balloon-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -60px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.2;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Balloons Background -->
+  <div id="balloon-container"></div>
+
+  <!-- Navbar -->
   <header>
     <div class="site-name">EduPortal</div>
     <nav>
@@ -84,6 +171,7 @@
     </nav>
   </header>
 
+  <!-- Content -->
   <div class="container">
     <h1>Inspiring Stories for Future Achievers</h1>
 
@@ -100,7 +188,7 @@
 
     <div class="story">
       <h2>Dr. APJ Abdul Kalam</h2>
-      <p>
+       <p>
         Born into a modest family in Rameswaram in 1931, Dr. Avul Pakir Jainulabdeen Abdul Kalam rose through sheer hard work and discipline. As a newspaper delivery boy, he funded his studies and developed a love for learning. He joined DRDO and later ISRO, where he played a pivotal role in India’s first satellite launch and missile programs.
         <br><br>
         He was the Chief Architect of India’s nuclear tests at Pokhran and earned the title "Missile Man of India." Despite his achievements, he remained humble, accessible, and deeply committed to the youth of the country. As President, he inspired a generation by writing books like *Wings of Fire* and *Ignited Minds*.
@@ -135,5 +223,23 @@
   </div>
 
   <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+
+  <!-- JS for Balloons -->
+  <script>
+    const container = document.getElementById("balloon-container");
+
+    function createBalloon() {
+      const b = document.createElement("div");
+      b.className = "balloon";
+      const size = 10 + Math.random() * 20;
+      b.style.width = b.style.height = size + "px";
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.animationDuration = 12 + Math.random() * 8 + "s";
+      container.appendChild(b);
+      setTimeout(() => b.remove(), 10000);
+    }
+
+    setInterval(createBalloon, 300);
+  </script>
 </body>
 </html>
