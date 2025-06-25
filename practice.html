@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Practice - EduPortal</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* ← Reset & box sizing */
     * {
       box-sizing: border-box;
     }
-    body {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll & broken gradient */
       margin: 0;
+      padding: 0;
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to bottom right, #ff512f, #dd2476);
       color: white;
-      padding-top: 90px;
     }
+
+    /* ← Fixed header at top */
     header {
       position: fixed;
       top: 0;
@@ -41,26 +47,81 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* ← Main page layout */
     .container {
       text-align: center;
-      padding: 50px 20px;
+      padding: 120px 20px 50px; /* Top padding to clear header */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+    .container h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    /* ← Buttons for different subjects */
     .subject-link {
-      display: inline-block;
+      display: block; /* Full-width block for better centering */
       background: rgba(255, 255, 255, 0.2);
       border: 2px solid white;
       color: white;
       padding: 20px 40px;
-      margin: 20px;
+      margin: 20px auto;
+      max-width: 300px;
       border-radius: 12px;
       font-size: 20px;
       font-weight: 600;
       text-decoration: none;
       transition: transform 0.3s, background 0.3s;
+      text-align: center;
     }
     .subject-link:hover {
       transform: scale(1.05);
       background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* ← MOBILE MEDIA QUERY */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .site-name {
+        font-size: 20px;
+      }
+
+      .welcome {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        font-size: 14px;
+      }
+
+      .container h1 {
+        font-size: 22px;
+        padding: 0 10px;
+      }
+
+      .subject-link {
+        width: 90%;
+        padding: 15px 10px;
+        font-size: 16px;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
@@ -71,6 +132,7 @@
     <nav>
       <a href="home.html">Home</a>
       <a href="resources.html">Resources</a>
+      <a href="practice.html">Practice</a>
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
