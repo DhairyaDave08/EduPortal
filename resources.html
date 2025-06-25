@@ -6,121 +6,218 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduPortal - Resources</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      background: linear-gradient(to bottom right, #ff512f, #dd2476);
-      color: white;
-      padding: 90px 20px 40px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    min-height: 100vh;
+    padding: 90px 20px 40px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+
+  .site-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 8px #fff4;
+  }
+
+  .welcome {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  nav a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: yellow;
+    transition: 0.3s;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  nav a:hover {
+    color: yellow;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px #0005;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  h2:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: yellow;
+  }
+.subject {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 4px 10px;
+  margin: 10px 0 10px;
+  border-radius: 30px;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  
+  
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.subject:hover {
+  background: yellow;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px yellow;
+}
+
+  .chapters {
+    display: none;
+    list-style: none;
+    margin: 10px 0 25px 15px;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .chapters li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .chapter-title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .chapter-title input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  .chapter-title a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .chapter-title a:hover {
+    color: yellow;
+    text-decoration: underline;
+  }
+
+  .difficulty-select {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .difficulty-select:hover {
+    background: #ddd;
+  }
+
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #eee;
+    opacity: 0.8;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
     }
-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+
+    nav {
+      margin-top: 10px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .site-name {
-      font-size: 26px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 0 8px #fff4;
-    }
-    .welcome {
-      font-size: 16px;
-      font-weight: 500;
-      color: #fff;
-    }
+
     nav a {
-      margin-left: 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0%;
-      height: 2px;
-      background: yellow;
-      transition: 0.3s;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    .subject {
-      font-size: 22px;
-      margin: 15px 0 5px;
-      cursor: pointer;
-      font-weight: normal;
+      margin: 10px;
     }
 
-    .subject:hover {
-      color: yellow;
-    }
-
-    .chapters {
-      display: none;
-      margin: 10px 0 20px 20px;
-      list-style: none;
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
+    main {
       padding: 10px;
     }
 
-    .chapters li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 8px 0;
-      font-weight: normal;
-    }
+    
+</style>
 
-    .chapter-title {
-      flex: 1;
-      display: flex;
-      align-items: center;
-    }
-
-    .chapter-title input {
-      margin-right: 10px;
-    }
-
-    .chapter-title a {
-      color: white;
-      text-decoration: none;
-      font-weight: normal;
-    }
-
-    .chapter-title a:hover {
-      color: yellow;
-    }
-
-    .difficulty-select {
-      padding: 4px;
-      border-radius: 6px;
-      border: none;
-      font-size: 14px;
-    }
-
-    footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 14px;
-  color: #eee;
-  opacity: 0.8;
-}
-
-  </style>
 </head>
 
 <body>
