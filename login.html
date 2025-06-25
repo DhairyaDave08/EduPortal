@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EduPortal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .login-box {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: slideUp 1s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #dd2476;
+      animation: blinkText 2s infinite;
+    }
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.05); }
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+    input:focus {
+      border-color: #dd2476;
+      outline: none;
+      box-shadow: 0 0 5px rgba(221, 36, 118, 0.5);
+      transform: scale(1.02);
+    }
+    button {
+      background: #dd2476;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: #c0135f;
+      transform: scale(1.03);
+    }
+    .register-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+    .register-link a {
+      color: #dd2476;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login to EduPortal</h2>
+    <input type="text" id="username" placeholder="Enter username" required>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <button onclick="login()">Login</button>
+    <div class="error" id="error"></div>
+    <div class="register-link">
+      Don't have an account? <a href="register.html">Register here</a>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      let error = document.getElementById("error");
+      if (password === "12345678") {
+        localStorage.setItem("username", username);
+        window.location.href = "home.html";
+      } else {
+        error.textContent = "Incorrect password. Please try again.";
+      }
+    }
+  </script>
+</body>
+</html>

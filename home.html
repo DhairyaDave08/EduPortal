@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduPortal - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding-top: 90px;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    .site-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 8px #fff4;
+    }
+    .welcome {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    nav a {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: yellow;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .glass-box {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glass-box h2 {
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #00000066;
+    }
+
+    .glass-box p {
+      color: #fefefe;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .motivation-img {
+      margin-top: 30px;
+      max-width: 100%;
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .motivation-img:hover {
+      transform: scale(1.02);
+    }
+
+    .celebration-banner {
+      position: fixed;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      color: #f12711;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 2000;
+      animation: popIn 0.5s ease;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ffe;
+      background: rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1500;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+<div id="welcomeBanner" class="celebration-banner">🎉 Welcome Future IITian! 🎉</div>
+
+<header>
+  <div class="site-name">EduPortal</div>
+  <div class="welcome" id="welcomeUser">Welcome, User</div>
+  <nav>
+    <a href="resources.html">Resources</a>
+    <a href="practice.html">Practice</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="glass-box">
+    <h2>Ignite Your IIT Journey with EduPortal</h2>
+    <p>
+      You’re not just preparing for an entrance exam — you're preparing to transform your life. EduPortal was built to support dreamers like you who aim high, work hard, and need the right tools in one place. With our simple and distraction-free UI, curated YouTube resources, practice sections, and timely reminders — you're never off track.
+    </p>
+    <p>
+      We understand your struggles: the late nights, the pressure, the moments of doubt. That’s why we made EduPortal — a website that feels like a mentor. Whether it’s brushing up concepts, solving MCQs, or just finding motivation when you need it — we’re here with you.
+    </p>
+    <p>
+      💡 Here’s what EduPortal gives you:
+      <ul>
+        <li>🎯 Laser-focused video resources for every topic</li>
+        <li>🧪 Quick-access MCQ testing zone</li>
+        <li>📅 JEE date tracking so you never miss a deadline</li>
+        <li>🎓 Contact system for help, doubt clearance, or feedback</li>
+      </ul>
+    </p>
+    <p>
+      IIT is not just an exam, it's a mindset. It's waking up daily with the belief that "I can". EduPortal is your personal coach, cheerleader, and resource bank.
+    </p>
+    <img class="motivation-img" src="swamivivekanada.jpg" alt="Motivational Image">
+     <div style="text-align: center; margin-top: 40px;">
+  <a href="motivaton.html" style="
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #000;
+    font-weight: bold;
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+  " onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.4)';" 
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)';">
+    🌟 Motivation Corner
+  </a>
+</div>
+
+  </div>
+</div>
+<div style="margin-top: 50px; text-align: center;">
+  <h2 style="font-size: 24px; margin-bottom: 20px;">Quick Access Links</h2>
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+    
+    <a href="https://chat.openai.com/" target="_blank" style="text-align: center; color: white; text-decoration: none;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" style="width: 80px; height: 80px; border-radius: 50%; background: white; padding: 8px;">
+      <div style="margin-top: 8px;">ChatGPT</div>
+    </a>
+
+    <a href="https://chat.deepseek.com/" target="_blank" style="text-align: center; color: white; text-decoration: none;">
+      <img src="data:image/png;base64,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" alt="DeepSeek" style="width: 80px; height: 80px; border-radius: 50%; background: white; padding: 8px;">
+      <div style="margin-top: 8px;">DeepSeek</div>
+    </a>
+
+   
+
+    <a href="https://jeemain.nta.ac.in/" target="_blank" style="text-align: center; color: white; text-decoration: none;">
+      <img src="data:image/jpeg;base64,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" alt="NTA JEE" style="width: 80px; height: 80px; border-radius: 50%; background: white; padding: 8px;">
+      <div style="margin-top: 8px;">NTA JEE</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 EduPortal. Made for warriors of JEE.
+</footer>
+
+<script>
+  const username = localStorage.getItem("username") || "User";
+  document.getElementById("welcomeUser").textContent = `Welcome, ${username}`;
+
+  // Celebration banner logic
+  setTimeout(() => {
+    document.getElementById("welcomeBanner").style.display = "none";
+  }, 3000);
+
+  // Confetti animation
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+  for (let i = 0; i < 200; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 4,
+      d: Math.random() * 100 + 10,
+      color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+      tilt: Math.random() * 10 - 10
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p) => {
+      ctx.beginPath();
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      p.y += Math.cos(p.d) + 2;
+      p.x += Math.sin(p.d);
+      if (p.y > canvas.height) {
+        p.y = -10;
+        p.x = Math.random() * canvas.width;
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+  setTimeout(() => canvas.remove(), 3000);
+</script>
+
+</body>
+</html>

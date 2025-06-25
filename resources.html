@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduPortal - Resources</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding: 90px 20px 40px;
+    }
+header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    .site-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 8px #fff4;
+    }
+    .welcome {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    nav a {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: yellow;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .subject {
+      font-size: 22px;
+      margin: 15px 0 5px;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    .subject:hover {
+      color: yellow;
+    }
+
+    .chapters {
+      display: none;
+      margin: 10px 0 20px 20px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .chapters li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0;
+      font-weight: normal;
+    }
+
+    .chapter-title {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .chapter-title input {
+      margin-right: 10px;
+    }
+
+    .chapter-title a {
+      color: white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .chapter-title a:hover {
+      color: yellow;
+    }
+
+    .difficulty-select {
+      padding: 4px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #eee;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="site-name">EduPortal</div>
+  <div class="welcome" id="welcomeUser">Welcome, User</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="practice.html">Practice</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+
+
+
+  <div class="container">
+    <h2>📘 Tap a Subject to Expand Chapters</h2>
+    <ul class="subjects">
+
+      <!-- PHYSICS -->
+      <li>
+        <span class="subject" onclick="toggleChapters(this)">🧲 Physics</span>
+        <ul class="chapters">
+          <li data-key="physics-basic-math">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/2i0p2tidN88?si=vToXj0v2h1BdiId7" target="_blank">🧮 Basic
+                Mathematics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-kinematics">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/v-kDOGM3214?si=I0kcK2ThOf2rYYmx" target="_blank">🚀 Kinematics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-motion-plane">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/U-tlb7_vnhM?si=zyksgpS61BZ9-DGb" target="_blank">🛫 Motion in a
+                Plane</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-laws-of-motion">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/cG2Sqj_dRgw?si=9jPsI-qnA0wjTEwj" target="_blank">⚖️ Laws of
+                Motion</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-work-energy">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/BX9EoW5sPE0?si=naiFNVm7SabxHgZE" target="_blank">⚡ Work, Energy &
+                Power</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-circular-motion">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/nsSeTLT3UF8?si=cu1gxhbtY3dkC6KU" target="_blank">🌀 Circular
+                Motion</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-rotational-motion">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/Ag4tOx3cN7I?si=qVAzy0xMyRpmh1MH" target="_blank">🎡 Rotational
+                Motion</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-gravitation">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/MTtYUHd3rxs?si=W1a6olqZ7JaFlwkM" target="_blank">🌍 Gravitation</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-fluids">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/xiNKdCzjtLQ?si=D2ktz167hzm9FnAq" target="_blank">🌊 Mechanical
+                Properties of Solids and Fluids</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-thermal">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/eL7uSfwY8Iw?si=pxacYcXOxaNz_I9t" target="_blank">🔥 Thermal
+                Properties of Matter</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-ktg">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/5upyHMKKmp0?si=affCbJvhN_OQebO6" target="_blank">💨 KTG and
+                Thermodynamics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-oscillations">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/bv8qBsHK9bM?si=6j-u3_whvFfPc-Xj" target="_blank">🎵 Oscillations</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-waves">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/s-u1YoZNFTw?si=rarN-v4CkPGrCfvy" target="_blank">🌊 Waves</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-electric-charges">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/GLEZZdGwuXU?si=ldNoIh95mnTCekuD" target="_blank">⚡ Electric Charges
+                & Fields</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-electric-potential">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <div>
+                🔋 Electric Potential & Capacitance <br>
+                <a href="https://www.youtube.com/live/sGb3VLDvNRU?si=Yd9e2zuUOkPaa7WB" target="_blank">🎥 Electric
+                  Potential</a><br>
+                <a href="https://www.youtube.com/live/sGb3VLDvNRU?si=Yd9e2zuUOkPaa7WB" target="_blank">🎥
+                  Capacitance</a>
+              </div>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="physics-current">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/JY24andAvME?si=ADGRT9ZjXRSk1y8D" target="_blank">🔌 Current
+                Electricity</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-magnetism">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/I4kB3onwjpw?si=ALcpAhILtDogiSRC" target="_blank">🧲 Magnetism</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-emi">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/_WXExQ4E-po?si=By0INW3yRnkI72Ph" target="_blank">🔄 Electromagnetic
+                Induction</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-ac">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/fEOhYtyEEY8?si=t00Hjh6mHrugmzW0" target="_blank">🔁 Alternating
+                Current</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-em-wave">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/8TnzQkZrztQ?si=15DOJg8MxMS3ZfNI" target="_blank">📡 Electromagnetic Waves</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-optics">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/5M53eu3UI3U?si=dwjS9UjP9AQUCUAS" target="_blank">🔍 Ray Optics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-wave-optics">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/ct-NImkqlTw?si=fIDOx0cmss7QxVRW" target="_blank">🌈 Wave Optics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-quantum">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/V76QPpoWVwA?si=GInezTA59DrZymGW" target="_blank">🧬 Quantum
+                Mechanics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-semiconductor">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/rdnWOyqZTy4?si=q2vmUxIHuvFmsxCG" target="_blank">💡 Semiconductor
+                Electronics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="physics-com">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/7xy0V3FjxdY?si=G-is1zmbctXLLh4j" target="_blank">🎯 Centre of Mass</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <span class="subject" onclick="toggleChapters(this)">📐 Mathematics</span>
+        <ul class="chapters">
+          <li data-key="maths-sequence-series">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/YJjISj4QIMQ?si=uLpce4aJAUBcWYtw" target="_blank">🔢 Sequence and
+                Series</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-matrices">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/MIjYm5u9XQ0?si=TOYmrQXnh7p4K4et" target="_blank">🧮 Matrices and
+                Determinants</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-vector-3d">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/LEgkaqypEc0?si=INwsT4YO_cr0LRPs" target="_blank">🧭 Vector and 3D
+                Geometry</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-binomial">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/JDfmkAwVgAI?si=lXT4o07WNRltO_4Z" target="_blank">🧪 Binomial
+                Theorem</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-sets-relations">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/wS0Jsgn14N0?si=XMcYPazUZP7xuoMb" target="_blank">🔗 Set, Relations &
+                Functions</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="maths-limits">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/108E5hTygdo?si=Ch7N6PqNQfSSBnBG" target="_blank">➗ Limits,
+                Continuity & Derivatives</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-application-derivatives">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/M_qbEf-byTs?si=LBQx31dd-aSyCOJp" target="_blank">📈 Application of
+                Derivatives</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-integration">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/bQL5tfjRlPQ?si=sgAfRYV6FHPChGMN" target="_blank">🧩 Integration</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-differential-equations">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/KGI1PiPN-q4?si=Ynz8pwUhnXDgyhBn" target="_blank">🧮 Differential
+                Equations & Area Under Curve</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-permutation">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/4JvfoEpEUmE?si=P1-l21rHQhu027gO" target="_blank">🔀 Permutation &
+                Combination</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-probability">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/KjRXeUMvvd8?si=6tRqizIs4Itu7dY6" target="_blank">🎲 Probability</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-trigo-inverse">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/UAnLynSIvwE?si=HpRvv4_qIQdu9CII" target="_blank">📐 Trigonometry &
+                Inverse Trigonometry</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-complex">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/WvKxocNin1U?si=VX_EIYEkBHFNanDI" target="_blank">🔮 Complex
+                Numbers</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+          <li data-key="maths-straight-lines">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/2-uji01Fc2g?si=19UVZFnKZsuMcRaV" target="_blank">📏 Straight
+                Lines</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-circles">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/UNKvlRlhFMY?si=5NG7IVhCCum_iDm8" target="_blank">⚪ Circles</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-conic-sections">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/UNKvlRlhFMY?si=5NG7IVhCCum_iDm8" target="_blank">📐 Conic
+                Sections</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-statics">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/R5Ru4_8RDJQ?si=UZmHgNq7mYzO-m_S" target="_blank">⚖️ Statics</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="maths-quadratic">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/GvWD_I97qgw?si=mNVv2Ev_HbpGmi9P" target="_blank">🔢 Quadratic
+                Equations</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Difficulty</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <span class="subject" onclick="toggleChapters(this)">🧪 Organic Chemistry</span>
+        <ul class="chapters">
+          <li data-key="organic-goc">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/NyWPZgibezQ?si=JExO3UQ32kZb3mD7" target="_blank">🌿 General Organic
+                Chemistry (GOC)</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-isomerism1">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/-x505wUMqsI?si=z8EbRg9dl8I9oVUm" target="_blank">🔀 Isomerism - I
+                </a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-isomerism2">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/wSXjjieuBWA?si=Zr_OEsaERruziYT4" target="_blank">🔀 Isomerism - II
+       </a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-hydrocarbon1">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/jD-amjIWlJg?si=krwggRnZnb10P-uJ" target="_blank">🔥 Hydrocarbon - I</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-hydrocarbon2">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/WxZVG_3a6Kg?si=9OXJkm_o6i8JxPpU" target="_blank">🔥 Hydrocarbon - II</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-haloalkanes">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/zEiTyZqP234?si=4FT5Sv6UbMuaPBAy" target="_blank">🧴 Haloalkanes &
+                Haloarenes</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-alcohols">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/vJIUOCilzxA?si=3cqaJVuA8miSwNuM" target="_blank">🍺 Alcohols, Phenols &
+                Ethers</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-aldehydes">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://youtu.be/jY4vxCf3yzs?si=7cYXI0f3OvRzZA2G" target="_blank">🥃 Aldehydes, Ketones &
+                Acids</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-amines">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/EOj1-kOWHT8?si=mC3ext2w1GxQoxgX" target="_blank">💊 Amines</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-biomolecules">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/SNwenidZ1ek?si=d_e6_HSGhYGG75t-" target="_blank">🧬 Biomolecules</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+
+          <li data-key="organic-purification">
+            <div class="chapter-title">
+              <input type="checkbox" onchange="storeCheckbox(this)">
+              <a href="https://www.youtube.com/live/9ldKfnFH9L8?si=-tvSnbik0eaIn8jt" target="_blank">🧪 Purification of
+                Organic Compounds</a>
+            </div>
+            <select class="difficulty-select" onchange="storeDifficulty(this)">
+              <option value="">Rate</option>
+              <option value="Easy">🟢 Easy</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="Hard">🔴 Hard</option>
+            </select>
+          </li>
+        </ul>
+      </li>
+<li>
+  <span class="subject" onclick="toggleChapters(this)">🧪 Inorganic Chemistry</span>
+  <ul class="chapters">
+
+    <li data-key="inorganic-periodic">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/mvL8BZx08g0?si=MiY-XUHJ2ry-a8bY" target="_blank">📘 Periodic Table & Periodicity</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-bonding">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/Usl3XhIiQe4?si=SFvcF5FiIuOFk6jD" target="_blank">🔗 Chemical Bonding</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-hydrogen">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/FdmETHB1mjE?si=uF1ACeF5j1evrPee" target="_blank">💧 Hydrogen</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-sblock">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/i_OLuqtHqgQ?si=3TSJONAtGYv9DgWY" target="_blank">🧂 The s-Block Element</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-pblock">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/s0z-H0THr4E?si=CSOxfnI6fj-BeOFk" target="_blank">🌬️ The p-Block Element</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-metallurgy">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/7Z8YnssknYg?si=zi5w3b63bE5AcUzv" target="_blank">⛏️ Metallurgy</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-dfblock">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/IbH-Cmqce0o?si=8OYpdxivdXrD_hRT" target="_blank">🔷 The d- and f-Block Elements</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-coordination1">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/aZ6M_gWA5sY?si=BMpQiPLoegrU35zk" target="_blank">🔗 Coordination Compounds - I</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-coordination2">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/7ggf0jh3ZqE?si=kuUJpDor4QaPsnuc" target="_blank">🔗 Coordination Compounds - II</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-qualitative">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/cBuNYrfQHsw?si=bV1NEzwhU7XCH0ga" target="_blank">🧪 Qualitative Analysis</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="inorganic-complete">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/UvpBv7oljZU?si=k5VclZ-Gtx2vItrZ" target="_blank">📚 Complete Inorganic Chemistry (Revision)</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+  </ul>
+</li>
+<li>
+  <span class="subject" onclick="toggleChapters(this)">⚗️ Physical Chemistry</span>
+  <ul class="chapters">
+
+    <li data-key="physical-atomic">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/sziNY_YN730?si=ZNgkhw5acd_t_ECI" target="_blank">🧬 Atomic Structure</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-mole">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/pi0bAxOGHIo?si=M5UYuiq7XWrtvk3B" target="_blank">⚖️ Mole Concept</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-thermo">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/2u1A9gskJ2I?si=9OSUbuQTrikKD9OS" target="_blank">🔥 Chemical Thermodynamics</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-equilibrium-chem">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/gcPWM9JVE0Q?si=qx3OnPfNdZkwHsom" target="_blank">⚖️ Chemical Equilibrium</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-equilibrium-ionic">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/IF7DGTWCK_c?si=rFgc7DLxnEEPFPoD" target="_blank">🧪 Ionic Equilibrium</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-kinetics">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/T0LFfBuifjk?si=iVAvnTvci_JTAkZq" target="_blank">⏱️ Chemical Kinetics</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-solutions">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/qN6yALfr9Yo?si=KR5j0wyVlR6I8tUd" target="_blank">💧 Solutions</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-electrochemistry">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://youtu.be/PbuGS8OIWBo?si=3K_WJUixn530WdJE" target="_blank">🔋 Electrochemistry</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+    <li data-key="physical-redox">
+      <div class="chapter-title">
+        <input type="checkbox" onchange="storeCheckbox(this)">
+        <a href="https://www.youtube.com/live/d7DKkFHcdZE?si=VbC1u8u8ACdHy_lS" target="_blank">⚛️ Redox Reactions</a>
+      </div>
+      <select class="difficulty-select" onchange="storeDifficulty(this)">
+        <option value="">Rate</option><option value="Easy">🟢 Easy</option><option value="Medium">🟡 Medium</option><option value="Hard">🔴 Hard</option>
+      </select>
+    </li>
+
+  </ul>
+</li>
+
+
+    </ul>
+  </div>
+
+  <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+
+  <script>
+    function toggleChapters(span) {
+      const chapters = span.nextElementSibling;
+      chapters.style.display = chapters.style.display === "block" ? "none" : "block";
+    }
+
+    function storeCheckbox(input) {
+      const key = input.closest("li").dataset.key;
+      localStorage.setItem(`${key}-done`, input.checked);
+    }
+
+    function storeDifficulty(select) {
+      const key = select.closest("li").dataset.key;
+      localStorage.setItem(`${key}-difficulty`, select.value);
+    }
+
+    function loadProgress() {
+      const chapters = document.querySelectorAll(".chapters li");
+      chapters.forEach(li => {
+        const key = li.dataset.key;
+        const checkbox = li.querySelector("input[type=checkbox]");
+        const select = li.querySelector("select");
+
+        const checked = localStorage.getItem(`${key}-done`);
+        if (checked === "true") checkbox.checked = true;
+
+        const savedDiff = localStorage.getItem(`${key}-difficulty`);
+        if (savedDiff) select.value = savedDiff;
+      });
+
+      const username = localStorage.getItem("username") || "User";
+      document.getElementById("welcomeUser").textContent = `🎓 Welcome, ${username}`;
+    }
+
+    window.onload = loadProgress;
+  </script>
+
+</body>
+
+</html>

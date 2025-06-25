@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice - EduPortal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding-top: 90px;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    .site-name {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .welcome {
+      font-size: 16px;
+    }
+    nav a {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .subject-link {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      color: white;
+      padding: 20px 40px;
+      margin: 20px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .subject-link:hover {
+      transform: scale(1.05);
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-name">EduPortal</div>
+    <div class="welcome" id="welcomeUser">Welcome, User</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="practice.html">Practice</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Select a Subject to Practice</h1>
+    <a class="subject-link" href="physics-formulas.html">Physics</a>
+    <a class="subject-link" href="chemistry-formulas.html">Chemistry</a>
+    <a class="subject-link" href="maths-formulas.html">Maths</a>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("welcomeUser").textContent = `Welcome, ${username}`;
+  </script>
+</body>
+</html>

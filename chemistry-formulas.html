@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chemistry Formulas - EduPortal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding: 90px 20px 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .flip-card {
+      background-color: transparent;
+      perspective: 1000px;
+      height: 180px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      backface-visibility: hidden;
+    }
+    .flip-card-front {
+      background: rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .flip-card-back {
+      background: rgba(0, 0, 0, 0.3);
+      transform: rotateY(180deg);
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ffe;
+      background: rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <nav style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(0,0,0,0.4); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <div style="font-size: 24px; font-weight: 600; color: #fff;">EduPortal</div>
+    <div style="display: flex; gap: 25px;">
+      <a href="home.html" style="color: white; text-decoration: none; font-weight: 500;">Home</a>
+      <a href="resources.html" style="color: white; text-decoration: none; font-weight: 500;">Resources</a>
+      <a href="practice.html" style="color: white; text-decoration: none; font-weight: 500;">Practice</a>
+      <a href="contact.html" style="color: white; text-decoration: none; font-weight: 500;">Contact</a>
+    </div>
+  </nav>
+
+  <h1>Chemistry Formulas</h1>
+  <div class="card-container">
+    <!-- Solutions -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Molality</div><div class="flip-card-back">m = moles of solute / mass of solvent (kg)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Molarity</div><div class="flip-card-back">M = moles of solute / volume of solution (L)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Raoult's Law</div><div class="flip-card-back">P = P₀ × X</div></div></div>
+
+    <!-- Electrochemistry -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Nernst Equation</div><div class="flip-card-back">E = E° - (0.0591/n) log Q</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Gibbs Free Energy</div><div class="flip-card-back">ΔG = -nFE</div></div></div>
+
+    <!-- Chemical Kinetics -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Rate Law</div><div class="flip-card-back">Rate = k[A]^m[B]^n</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Half-Life (1st order)</div><div class="flip-card-back">t½ = 0.693 / k</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Integrated Rate (1st order)</div><div class="flip-card-back">ln[A] = -kt + ln[A]₀</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Zero Order Half-Life</div><div class="flip-card-back">t½ = [A]₀ / 2k</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Nth Order Half-Life</div><div class="flip-card-back">t½ ∝ 1 / [A]₀ⁿ⁻¹</div></div></div>
+
+    <!-- Equilibrium -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Kc Expression</div><div class="flip-card-back">Kc = [products]^n / [reactants]^m</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Kp and Kc Relation</div><div class="flip-card-back">Kp = Kc(RT)^Δn</div></div></div>
+
+    <!-- Thermodynamics -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">ΔH Formula</div><div class="flip-card-back">ΔH = ΔU + PΔV</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">ΔG Formula</div><div class="flip-card-back">ΔG = ΔH - TΔS</div></div></div>
+
+    <!-- Structure of Atom -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">de Broglie Wavelength</div><div class="flip-card-back">λ = h / mv</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Photon Energy</div><div class="flip-card-back">E = hν = hc/λ</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Bohr Radius</div><div class="flip-card-back">rₙ = 0.529 × n² / Z Å</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Bohr Energy</div><div class="flip-card-back">Eₙ = -13.6 × Z² / n² eV</div></div></div>
+  
+  </div>
+
+  <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+</body>
+</html>

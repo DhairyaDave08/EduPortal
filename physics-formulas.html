@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Formulas - EduPortal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding: 90px 20px 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .flip-card {
+      background-color: transparent;
+      perspective: 1000px;
+      height: 180px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      backface-visibility: hidden;
+    }
+    .flip-card-front {
+      background: rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .flip-card-back {
+      background: rgba(0, 0, 0, 0.3);
+      transform: rotateY(180deg);
+      font-size: 16px;
+    }
+     footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ffe;
+      background: rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+ <nav style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(0,0,0,0.4); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <div style="font-size: 24px; font-weight: 600; color: #fff;">EduPortal</div>
+    <div style="display: flex; gap: 25px;">
+      <a href="home.html" style="color: white; text-decoration: none; font-weight: 500;">Home</a>
+      <a href="resources.html" style="color: white; text-decoration: none; font-weight: 500;">Resources</a>
+      <a href="practice.html" style="color: white; text-decoration: none; font-weight: 500;">Practice</a>
+      <a href="contact.html" style="color: white; text-decoration: none; font-weight: 500;">Contact</a>
+    </div>
+  </nav>
+  <h1>Physics Formulas</h1>
+  <div class="card-container">
+    <!-- Physics formulas -->
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Kinetic Energy</div><div class="flip-card-back">KE = ½ × m × v²</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Potential Energy</div><div class="flip-card-back">PE = m × g × h</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Work Done</div><div class="flip-card-back">W = F × d × cosθ</div></div></div>
+    
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Power</div><div class="flip-card-back">P = W / t</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Mechanical Energy</div><div class="flip-card-back">E = KE + PE</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Law of Conservation of Energy</div><div class="flip-card-back">Total Energy = Constant</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Escape Velocity</div><div class="flip-card-back">vₑ = √(2GM / R)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Orbital Velocity</div><div class="flip-card-back">v = √(GM / R)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Simple Harmonic Motion</div><div class="flip-card-back">x(t) = A cos(ωt + φ)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Time Period of SHM</div><div class="flip-card-back">T = 2π√(m/k)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Frequency</div><div class="flip-card-back">f = 1 / T</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Wave Speed</div><div class="flip-card-back">v = f × λ</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Refractive Index</div><div class="flip-card-back">n = c / v</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Lens Formula</div><div class="flip-card-back">1/f = 1/v - 1/u</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Mirror Formula</div><div class="flip-card-back">1/f = 1/v + 1/u</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Magnification</div><div class="flip-card-back">m = h'/h = v/u</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Ohm's Law</div><div class="flip-card-back">V = I × R</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Resistors in Series</div><div class="flip-card-back">R = R₁ + R₂ + R₃ + ...</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Resistors in Parallel</div><div class="flip-card-back">1/R = 1/R₁ + 1/R₂ + ...</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Capacitors in Series</div><div class="flip-card-back">1/C = 1/C₁ + 1/C₂ + ...</div></div></div>
+<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Magnetic Field at Center of Circular Loop</div><div class="flip-card-back">B = μ₀ × I / (2R)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Magnetic Field due to Long Straight Wire</div><div class="flip-card-back">B = μ₀ × I / (2πr)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Magnetic Field in a Solenoid</div><div class="flip-card-back">B = μ₀ × n × I</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Ampere's Circuital Law</div><div class="flip-card-back">∮B · dl = μ₀ × Iₑₙc</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Gauss's Law</div><div class="flip-card-back">∮E · dA = Qₑₙc / ε₀</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Ohm's Law</div><div class="flip-card-back">V = I × R</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Current Density</div><div class="flip-card-back">J = I / A</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Drift Velocity</div><div class="flip-card-back">v_d = I / (n × A × e)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Thermal Expansion</div><div class="flip-card-back">ΔL = α × L₀ × ΔT</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Heat Transfer</div><div class="flip-card-back">Q = m × c × ΔT</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">First Law of Thermodynamics</div><div class="flip-card-back">ΔU = Q - W</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Work in Isothermal Process</div><div class="flip-card-back">W = nRT ln(V₂/V₁)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Work in Adiabatic Process</div><div class="flip-card-back">W = (P₂V₂ - P₁V₁)/(1 - γ)</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Bernoulli's Equation</div><div class="flip-card-back">P + ½ρv² + ρgh = constant</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Equation of Continuity</div><div class="flip-card-back">A₁v₁ = A₂v₂</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Photoelectric Equation</div><div class="flip-card-back">E_k = hν - φ</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">de Broglie Wavelength</div><div class="flip-card-back">λ = h / p</div></div></div>
+    <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">Mass-Energy Relation</div><div class="flip-card-back">E = mc²</div></div></div>
+  
+  </div>
+    <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+</body>
+</html>

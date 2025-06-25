@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - EduPortal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .form-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 360px;
+      animation: slideUp 1s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    h2 {
+      color: #f12711;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: blinkText 2s infinite;
+    }
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    input:focus, select:focus {
+      border-color: #f12711;
+      box-shadow: 0 0 5px rgba(241, 39, 17, 0.5);
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #f12711;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #d10e00;
+    }
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      text-align: center;
+      color: green;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .login-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .login-link a {
+      color: #f12711;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Register for EduPortal</h2>
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="address" placeholder="Address">
+    <input type="date" id="dob" placeholder="Date of Birth">
+    <input type="email" id="email" placeholder="Email ID">
+    <input type="tel" id="mobile" placeholder="Mobile Number">
+    <input type="text" id="username" placeholder="Username">
+
+    <label for="jeeYear">JEE Year of Appearance:</label>
+    <select id="jeeYear" name="jeeYear" required>
+      <option value="" disabled selected>Select Year</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+    </select>
+
+    <button onclick="register()">Register</button>
+    <div class="note" id="note"></div>
+    <div class="error" id="error"></div>
+
+    <div class="login-link">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
+  </div>
+
+  <script>
+    function register() {
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const dob = document.getElementById("dob").value;
+      const email = document.getElementById("email").value;
+      const mobile = document.getElementById("mobile").value;
+      const username = document.getElementById("username").value;
+      const jeeYearStr = document.getElementById("jeeYear").value;
+
+      const note = document.getElementById("note");
+      const error = document.getElementById("error");
+      note.textContent = "";
+      error.textContent = "";
+
+      if (!name || !address || !dob || !email || !mobile || !username || !jeeYearStr) {
+        error.textContent = "Please fill in all fields.";
+        return;
+      }
+
+      const dobYear = new Date(dob).getFullYear();
+      if (dobYear <= 2005) {
+        error.textContent = "DOB must be after 2005.";
+        return;
+      }
+
+      const jeeYear = parseInt(jeeYearStr);
+      if (jeeYear < 2026 || jeeYear > 2028) {
+        error.textContent = "JEE Year must be 2026, 2027, or 2028.";
+        return;
+      }
+
+      note.textContent = "Your password is 12345678";
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
