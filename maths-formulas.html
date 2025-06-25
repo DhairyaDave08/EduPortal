@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maths Formulas - EduPortal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      padding: 90px 20px 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      perspective: 1000px;
+      height: 180px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background: rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .flip-card-back {
+      background: rgba(0, 0, 0, 0.3);
+      transform: rotateY(180deg);
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ffe;
+      background: rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav
+    style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(0,0,0,0.4); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <div style="font-size: 24px; font-weight: 600; color: #fff;">EduPortal</div>
+    <div style="display: flex; gap: 25px;">
+      <a href="home.html" style="color: white; text-decoration: none; font-weight: 500;">Home</a>
+      <a href="resources.html" style="color: white; text-decoration: none; font-weight: 500;">Resources</a>
+      <a href="practice.html" style="color: white; text-decoration: none; font-weight: 500;">Practice</a>
+      <a href="contact.html" style="color: white; text-decoration: none; font-weight: 500;">Contact</a>
+    </div>
+  </nav>
+
+  <h1>Maths Formulas</h1>
+  <div class="card-container">
+    <!-- Trigonometry formulas flip-card section -->
+    <div class="card-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sin²θ + cos²θ</div>
+          <div class="flip-card-back">= 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">1 + tan²θ</div>
+          <div class="flip-card-back">= sec²θ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">1 + cot²θ</div>
+          <div class="flip-card-back">= cosec²θ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sin(2θ)</div>
+          <div class="flip-card-back">= 2sinθcosθ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">cos(2θ)</div>
+          <div class="flip-card-back">= cos²θ − sin²θ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">tan(2θ)</div>
+          <div class="flip-card-back">= 2tanθ / (1 − tan²θ)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sin(A ± B)</div>
+          <div class="flip-card-back">= sinAcosB ± cosAsinB</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">cos(A ± B)</div>
+          <div class="flip-card-back">= cosAcosB ∓ sinAsinB</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">tan(A ± B)</div>
+          <div class="flip-card-back">= (tanA ± tanB) / (1 ∓ tanAtanB)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sin²A</div>
+          <div class="flip-card-back">= ½(1 − cos2A)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">cos²A</div>
+          <div class="flip-card-back">= ½(1 + cos2A)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">tan²A</div>
+          <div class="flip-card-back">= (1 − cos2A)/(1 + cos2A)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sinA·sinB</div>
+          <div class="flip-card-back">= ½[cos(A−B) − cos(A+B)]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">cosA·cosB</div>
+          <div class="flip-card-back">= ½[cos(A−B) + cos(A+B)]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sinA·cosB</div>
+          <div class="flip-card-back">= ½[sin(A+B) + sin(A−B)]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">sin(3θ)</div>
+          <div class="flip-card-back">= 3sinθ − 4sin³θ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">cos(3θ)</div>
+          <div class="flip-card-back">= 4cos³θ − 3cosθ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">i²</div>
+          <div class="flip-card-back">= −1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">z = a + ib</div>
+          <div class="flip-card-back">a = Re(z), b = Im(z)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Modulus</div>
+          <div class="flip-card-back">|z| = √(a² + b²)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Argument</div>
+          <div class="flip-card-back">arg(z) = tan⁻¹(b/a)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Conjugate</div>
+          <div class="flip-card-back">z̄ = a − ib</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Multiplicative Inverse</div>
+          <div class="flip-card-back">1/z = z̄ / |z|²</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Polar Form</div>
+          <div class="flip-card-back">z = r(cosθ + i sinθ)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Euler’s Form</div>
+          <div class="flip-card-back">z = r·e^{iθ}</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Multiplication (Polar)</div>
+          <div class="flip-card-back">z₁z₂ = r₁r₂·cis(θ₁ + θ₂)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Division (Polar)</div>
+          <div class="flip-card-back">z₁/z₂ = (r₁/r₂)·cis(θ₁ − θ₂)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">De Moivre’s Theorem</div>
+          <div class="flip-card-back">zⁿ = rⁿ·cis(nθ)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Cube Root of Unity</div>
+          <div class="flip-card-back">1, ω, ω² where ω = −½ + i(√3/2)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">n!</div>
+          <div class="flip-card-back">n! = n × (n−1) × ... × 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Permutation (nPr)</div>
+          <div class="flip-card-back">nPr = n! / (n − r)!</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Combination (nCr)</div>
+          <div class="flip-card-back">nCr = n! / [r!(n − r)!]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">nCr = nC(n−r)</div>
+          <div class="flip-card-back">Symmetric property of combination</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Repetition Allowed (Combinations)</div>
+          <div class="flip-card-back">n+r−1Cr</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Circular Permutation</div>
+          <div class="flip-card-back">(n−1)!</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">(a + b)ⁿ Expansion</div>
+          <div class="flip-card-back">(a + b)ⁿ = Σ [nCr × aⁿ⁻ʳ × bʳ]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Total Terms</div>
+          <div class="flip-card-back">n + 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Middle Term (n even)</div>
+          <div class="flip-card-back">T_{(n/2)+1}</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Middle Terms (n odd)</div>
+          <div class="flip-card-back">T_{(n+1)/2}, T_{(n+3)/2}</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">General Term</div>
+          <div class="flip-card-back">T_{r+1} = nCr × aⁿ⁻ʳ × bʳ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Coefficient of xʳ</div>
+          <div class="flip-card-back">Find r such that xʳ matches: T = nCr × aⁿ⁻ʳ × bʳ</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Binomial for Negative/Decimal</div>
+          <div class="flip-card-back">(1 + x)^n = 1 + nx + n(n−1)x²/2! + ...</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Circle</div>
+          <div class="flip-card-back">(x − h)² + (y − k)² = r²</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Parabola (Horizontal)</div>
+          <div class="flip-card-back">y² = 4ax</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Parabola (Vertical)</div>
+          <div class="flip-card-back">x² = 4ay</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Ellipse</div>
+          <div class="flip-card-back">x²/a² + y²/b² = 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Hyperbola</div>
+          <div class="flip-card-back">x²/a² − y²/b² = 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Eccentricity</div>
+          <div class="flip-card-back">Circle: 0, Parabola: 1, Ellipse: &lt;1, Hyperbola: &gt;1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Slope</div>
+          <div class="flip-card-back">m = (y₂ − y₁) / (x₂ − x₁)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Point-Slope Form</div>
+          <div class="flip-card-back">y − y₁ = m(x − x₁)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Slope-Intercept Form</div>
+          <div class="flip-card-back">y = mx + c</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Two Point Form</div>
+          <div class="flip-card-back">(y − y₁) = [(y₂ − y₁)/(x₂ − x₁)](x − x₁)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Intercept Form</div>
+          <div class="flip-card-back">x/a + y/b = 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Angle Between Two Lines</div>
+          <div class="flip-card-back">tanθ = |(m₁ − m₂)/(1 + m₁m₂)|</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Distance Between Point and Line</div>
+          <div class="flip-card-back">|Ax + By + C| / √(A² + B²)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">nth Term of AP</div>
+          <div class="flip-card-back">aₙ = a + (n−1)d</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Sum of AP</div>
+          <div class="flip-card-back">Sₙ = n/2 [2a + (n−1)d]</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">nth Term of GP</div>
+          <div class="flip-card-back">aₙ = a·rⁿ⁻¹</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Sum of GP (finite)</div>
+          <div class="flip-card-back">Sₙ = a(1 − rⁿ)/(1 − r), r ≠ 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Sum of Infinite GP</div>
+          <div class="flip-card-back">S = a / (1 − r), |r| &lt; 1</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">AM</div>
+          <div class="flip-card-back">AM = (a + b)/2</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">GM</div>
+          <div class="flip-card-back">GM = √(ab)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">HM</div>
+          <div class="flip-card-back">HM = 2ab / (a + b)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Probability of an Event</div>
+          <div class="flip-card-back">P(E) = Favorable Outcomes / Total Outcomes</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Complement of Event</div>
+          <div class="flip-card-back">P(E') = 1 − P(E)</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Addition Rule</div>
+          <div class="flip-card-back">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Conditional Probability</div>
+          <div class="flip-card-back">P(A|B) = P(A ∩ B) / P(B)</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Independent Events</div>
+          <div class="flip-card-back">P(A ∩ B) = P(A) × P(B)</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Bayes' Theorem</div>
+          <div class="flip-card-back">P(A|B) = P(B|A)P(A) / P(B)</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Mean</div>
+          <div class="flip-card-back">Mean (μ) = Σxᵢ / n</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Median (odd n)</div>
+          <div class="flip-card-back">Median = Value at (n+1)/2 position</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Median (even n)</div>
+          <div class="flip-card-back">Median = Average of values at n/2 and (n/2)+1</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Mode</div>
+          <div class="flip-card-back">Most frequent data value</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Variance</div>
+          <div class="flip-card-back">σ² = Σ(xᵢ − μ)² / n</div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Standard Deviation</div>
+          <div class="flip-card-back">σ = √Variance = √(Σ(xᵢ − μ)² / n)</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Basic Limits</div>
+          <div class="flip-card-back">
+            lim<sub>x→0</sub> (sinx)/x = 1<br>
+            lim<sub>x→0</sub> (1 - cosx)/x² = ½<br>
+            lim<sub>x→∞</sub> (1 + 1/x)<sup>x</sup> = e
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Algebra of Limits</div>
+          <div class="flip-card-back">
+            lim (f ± g) = lim f ± lim g<br>
+            lim (f × g) = lim f × lim g<br>
+            lim (f / g) = lim f ÷ lim g (g ≠ 0)
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Derivatives – Basics</div>
+          <div class="flip-card-back">
+            d/dx (xⁿ) = n·xⁿ⁻¹<br>
+            d/dx (sinx) = cosx<br>
+            d/dx (cosx) = -sinx
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Derivatives – Advanced</div>
+          <div class="flip-card-back">
+            d/dx (tanx) = sec²x<br>
+            d/dx (eˣ) = eˣ<br>
+            d/dx (lnx) = 1/x
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Rules of Differentiation</div>
+          <div class="flip-card-back">
+            Chain Rule: d/dx f(g(x)) = f'(g(x))·g'(x)<br>
+            Product Rule: d(uv)/dx = u'v + uv'<br>
+            Quotient Rule: d(u/v)/dx = (v·u' - u·v') / v²
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Integration Basics</div>
+          <div class="flip-card-back">
+            ∫xⁿ dx = xⁿ⁺¹ / (n+1) + C (n ≠ -1)<br>
+            ∫1/x dx = ln|x| + C<br>
+            ∫eˣ dx = eˣ + C
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Trig Integrals</div>
+          <div class="flip-card-back">
+            ∫sinx dx = -cosx + C<br>
+            ∫cosx dx = sinx + C<br>
+            ∫sec²x dx = tanx + C
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Integration Techniques</div>
+          <div class="flip-card-back">
+            ∫udv = uv - ∫vdu (by parts)<br>
+            ∫f(ax + b) dx = (1/a)·F(ax + b)<br>
+            Substitution: Let x = g(t), then use dx = g'(t) dt
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Vector Basics</div>
+          <div class="flip-card-back">
+            Magnitude: |a| = √(a₁² + a₂² + a₃²)<br>
+            a·b = |a||b|cosθ<br>
+            a×b = |a||b|sinθ · n̂
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Unit Vector & Direction Cosines</div>
+          <div class="flip-card-back">
+            Unit Vector: â = a / |a|<br>
+            Direction cosines: cosα = x/r, cosβ = y/r, cosγ = z/r
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Vector Identities</div>
+          <div class="flip-card-back">
+            a × (b × c) = (a·c)b - (a·b)c<br>
+            (a × b) · c = a · (b × c)
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Geometry -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">3D Distance & Section</div>
+          <div class="flip-card-back">
+            Distance: √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²]<br>
+            Section Ratio: (mx₂ + nx₁)/(m+n), etc.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Straight Line (3D)</div>
+          <div class="flip-card-back">
+            Vector Form: r = a + λb<br>
+            Cartesian: (x - x₁)/a = (y - y₁)/b = (z - z₁)/c
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Plane Equation</div>
+          <div class="flip-card-back">
+            Vector: r · n̂ = d<br>
+            Cartesian: ax + by + cz = d
+          </div>
+        </div>
+      </div>
+
+      <!-- Matrices & Determinants -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Matrix Types</div>
+          <div class="flip-card-back">
+            Square, Diagonal, Scalar, Identity<br>
+            Transpose: Aᵀ, Symmetric: A = Aᵀ
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Matrix Operations</div>
+          <div class="flip-card-back">
+            (AB)ᵀ = BᵀAᵀ<br>
+            A⁻¹ = adj(A)/|A|<br>
+            adj(A)·A = |A|·I
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Determinant Properties</div>
+          <div class="flip-card-back">
+            |AB| = |A||B|<br>
+            |Aᵀ| = |A|<br>
+            Row ops don't change value of |A|
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Cramer's Rule</div>
+          <div class="flip-card-back">
+            x = |A₁| / |A|<br>
+            y = |A₂| / |A|<br>
+            z = |A₃| / |A|
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+</body>
+
+</html>
