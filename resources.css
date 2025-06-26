@@ -1,0 +1,278 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ff512f, #dd2476);
+      color: white;
+      min-height: 100vh;
+      padding: 150px 20px 40px;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+
+    .site-name {
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 8px #fff4;
+    }
+
+    .welcome {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: yellow;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px #0005;
+    }
+
+    .instruction {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      text-align: center;
+      text-shadow: 0 1px 1px #000;
+    }
+
+    .subject {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 12px 26px;
+      margin: 15px 10px;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #ffe600, #ff9900);
+      color: #000;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 230, 0, 0.7);
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 1px 1px #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .subject::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: skewX(-20deg);
+      transition: left 0.5s;
+    }
+
+    .subject:hover::before {
+      left: 130%;
+    }
+
+    .subject:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(118, 1, 124, 0.9), 0 0 10px rgba(105, 2, 116, 0.8);
+    }
+
+    .chapters {
+      display: none;
+      list-style: none;
+      margin: 10px 0 25px 15px;
+      padding: 10px 15px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .chapters li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .chapter-title {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .chapter-title input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .chapter-title a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .chapter-title a:hover {
+      color: yellow;
+      text-decoration: underline;
+    }
+
+    .difficulty-select {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 14px;
+      font-weight: bold;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .difficulty-select:hover {
+      background: #ddd;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    footer .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    footer h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer p,
+    footer li {
+      font-size: 15px;
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: yellow;
+    }
+
+    footer .column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 20px;
+    }
+
+    footer .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 10px;
+      }
+
+      main {
+        padding: 20px 10px;
+      }
+
+      footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .instruction {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+    }
