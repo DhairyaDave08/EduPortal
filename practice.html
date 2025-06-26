@@ -5,125 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Practice - EduPortal</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    /* ← Reset & box sizing */
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden; /* Prevent horizontal scroll & broken gradient */
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #ff512f, #dd2476);
-      color: white;
-    }
-
-    /* ← Fixed header at top */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-    .site-name {
-      font-size: 26px;
-      font-weight: bold;
-    }
-    .welcome {
-      font-size: 16px;
-    }
-    nav a {
-      margin-left: 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* ← Main page layout */
-    .container {
-      text-align: center;
-      padding: 120px 20px 50px; /* Top padding to clear header */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .container h1 {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-
-    /* ← Buttons for different subjects */
-    .subject-link {
-      display: block; /* Full-width block for better centering */
-      background: rgba(255, 255, 255, 0.2);
-      border: 2px solid white;
-      color: white;
-      padding: 20px 40px;
-      margin: 20px auto;
-      max-width: 300px;
-      border-radius: 12px;
-      font-size: 20px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s, background 0.3s;
-      text-align: center;
-    }
-    .subject-link:hover {
-      transform: scale(1.05);
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    /* ← MOBILE MEDIA QUERY */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
-
-      .site-name {
-        font-size: 20px;
-      }
-
-      .welcome {
-        font-size: 14px;
-        margin-top: 5px;
-      }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin-left: 0;
-        font-size: 14px;
-      }
-
-      .container h1 {
-        font-size: 22px;
-        padding: 0 10px;
-      }
-
-      .subject-link {
-        width: 90%;
-        padding: 15px 10px;
-        font-size: 16px;
-        margin: 10px auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="practice.css">
 </head>
 <body>
   <header>
@@ -143,6 +25,37 @@
     <a class="subject-link" href="chemistry-formulas.html">Chemistry</a>
     <a class="subject-link" href="maths-formulas.html">Maths</a>
   </div>
+  <footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+    
+    <!-- Contact Us -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Contact Us</h3>
+      <p>Email: dhairyadave433@gmail.com</p>
+      <p>GitHub:DhairyaDave08</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+        <li><a href="resources.html" style="color: #fff; text-decoration: none;">Resources</a></li>
+        <li><a href="practice.html" style="color: #fff; text-decoration: none;">Practice</a></li>
+        <li><a href="chemistry-formula.html" style="color: #fff; text-decoration: none;">Formulas</a></li>
+        <li><a href="motivation.html" style="color: #fff; text-decoration: none;">Motivation</a></li>
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- Copyright -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>EduPortal</h3>
+      <p>Empowering JEE Aspirants</p>
+      <p style="margin-top: 20px;">&copy; 2025 EduPortal. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
   <script>
     const username = localStorage.getItem("username") || "User";
