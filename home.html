@@ -5,158 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduPortal - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #ff512f, #dd2476);
-      color: white;
-      padding-top: 90px;
-      overflow-x: hidden;
-    }
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-    .site-name {
-      font-size: 26px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 0 8px #fff4;
-    }
-    .welcome {
-      font-size: 16px;
-      font-weight: 500;
-      color: #fff;
-    }
-    nav a {
-      margin-left: 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0%;
-      height: 2px;
-      background: yellow;
-      transition: 0.3s;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
+<link rel="stylesheet" href="home.css">
 
-    .container {
-      max-width: 950px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    .glass-box {
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      animation: fadeInUp 1s ease;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .glass-box h2 {
-      color: #fff;
-      font-size: 30px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px #00000066;
-    }
-
-    .glass-box p {
-      color: #fefefe;
-      font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-
-    .motivation-img {
-      margin-top: 30px;
-      max-width: 100%;
-      width: 400px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
-
-    .motivation-img:hover {
-      transform: scale(1.02);
-    }
-
-    .celebration-banner {
-      position: fixed;
-      top: 90px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      color: #f12711;
-      padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 22px;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 2000;
-      animation: popIn 0.5s ease;
-    }
-
-    @keyframes popIn {
-      from { opacity: 0; transform: translate(-50%, -20px); }
-      to { opacity: 1; transform: translate(-50%, 0); }
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #ffe;
-      background: rgba(0, 0, 0, 0.1);
-      margin-top: 60px;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 1500;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -166,6 +16,7 @@
 <header>
   <div class="site-name">EduPortal</div>
   <div class="welcome" id="welcomeUser">Welcome, User</div>
+  <br>
   <nav>
     <a href="resources.html">Resources</a>
     <a href="practice.html">Practice</a>
@@ -239,8 +90,37 @@
   </div>
 </div>
 
-<footer>
-  &copy; 2025 EduPortal. Made for warriors of JEE.
+
+<footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+    
+    <!-- Contact Us -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Contact Us</h3>
+      <p>Email: dhairyadave433@gmail.com</p>
+      <p>GitHub:DhairyaDave08</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+        <li><a href="resources.html" style="color: #fff; text-decoration: none;">Resources</a></li>
+        <li><a href="practice.html" style="color: #fff; text-decoration: none;">Practice</a></li>
+        <li><a href="chemistry-formula.html" style="color: #fff; text-decoration: none;">Formulas</a></li>
+        <li><a href="motivation.html" style="color: #fff; text-decoration: none;">Motivation</a></li>
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- Copyright -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>EduPortal</h3>
+      <p>Empowering JEE Aspirants</p>
+      <p style="margin-top: 20px;">&copy; 2025 EduPortal. All Rights Reserved.</p>
+    </div>
+  </div>
 </footer>
 
 <script>
