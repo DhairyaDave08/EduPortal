@@ -1,0 +1,148 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #031116, #0d2c36, #2c5364);
+      color: #f8f8f8;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 0;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .site-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #ffd700;
+    }
+
+    .story {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(3px);
+      transition: 0.3s;
+    }
+
+    .story h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #ffed9e;
+    }
+
+    .story p {
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+      color: #f0f0f0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ddd;
+      background: rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+      border-radius: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Balloons */
+    #balloon-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -60px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.2;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 10px;
+      }
+    }
