@@ -1,222 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduPortal - Resources</title>
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="resources.css">
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    color: white;
-    min-height: 100vh;
-    padding: 90px 20px 40px;
-  }
 
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-  }
-
-  .site-name {
-    font-size: 26px;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 0 8px #fff4;
-  }
-
-  .welcome {
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-  }
-
-  nav a {
-    margin-left: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: 0.3s;
-  }
-
-  nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 2px;
-    background: yellow;
-    transition: 0.3s;
-  }
-
-  nav a:hover::after {
-    width: 100%;
-  }
-
-  nav a:hover {
-    color: yellow;
-  }
-
-  main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 20px #0005;
-  }
-
-  h2 {
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 12px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  h2:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: yellow;
-  }
-.subject {
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 4px 10px;
-  margin: 10px 0 10px;
-  border-radius: 30px;
-  color: white;
-  background: rgba(255, 255, 255, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  
-  
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  backdrop-filter: blur(4px);
-}
-
-.subject:hover {
-  background: yellow;
-  color: black;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px yellow;
-}
-
-  .chapters {
-    display: none;
-    list-style: none;
-    margin: 10px 0 25px 15px;
-    padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    animation: fadeIn 0.4s ease-in-out;
-  }
-
-  .chapters li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  .chapter-title {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-
-  .chapter-title input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-  }
-
-  .chapter-title a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .chapter-title a:hover {
-    color: yellow;
-    text-decoration: underline;
-  }
-
-  .difficulty-select {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: bold;
-    outline: none;
-    transition: 0.3s;
-  }
-
-  .difficulty-select:hover {
-    background: #ddd;
-  }
-
-  footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 14px;
-    color: #eee;
-    opacity: 0.8;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      padding: 10px 20px;
-    }
-
-    nav {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      margin: 10px;
-    }
-
-    main {
-      padding: 10px;
-    }
-
-    
-</style>
 
 </head>
 
@@ -1204,7 +995,35 @@
     </ul>
   </div>
 
-  <footer>&copy; 2025 EduPortal. All rights reserved.</footer>
+  <footer>
+  <div class="footer-container">
+    <div class="column">
+      <h3>Contact Us</h3>
+      <p>Email: dhairyadave433@gmail.com</p> 
+      <p>GitHub: DhairyaDave08</p>
+    </div>
+    <div class="column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="chemistry-formula.html">Formulas</a></li>
+        <li><a href="motivation.html">Motivation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>About EduPortal</h3>
+      <p>We aim to provide free, quality content for JEE aspirants. Your success is our mission.</p>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 EduPortal. All Rights Reserved.
+  </div>
+</footer>
+
 
   <script>
     function toggleChapters(span) {
