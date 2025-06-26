@@ -72,7 +72,7 @@
       }
 
       const dobYear = new Date(dob).getFullYear();
-      if (dobYear <= 2005) {
+      if (dobYear <= 2005 && dobYear>=2009) {
         error.textContent = "DOB must be after 2005.";
         return;
       }
@@ -85,7 +85,7 @@
 
       note.textContent = "Your password is 12345678";
       setTimeout(() => {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       }, 2500);
     }
   </script>
