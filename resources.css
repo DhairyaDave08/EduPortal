@@ -180,19 +180,17 @@
     }
 
     footer {
-      background-color: #000;
-      color: #fff;
-      padding: 40px 20px;
-      font-family: 'Segoe UI', sans-serif;
-    }
+  width: 100%;
+  overflow-x: hidden;
+}
 
-    footer .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+footer .footer-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
 
     footer h3 {
       font-size: 20px;
