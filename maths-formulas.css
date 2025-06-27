@@ -6,6 +6,10 @@
       overflow-x: hidden;
         color: white;
       padding: 90px 20px 40px;
+        html {
+  overflow-x: hidden;
+}
+
     }
     h1 {
       text-align: center;
