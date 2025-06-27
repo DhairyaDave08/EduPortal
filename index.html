@@ -8,31 +8,32 @@
 
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login to EduPortal</h2>
-    <input type="text" id="username" placeholder="Enter username" required>
-    <input type="password" id="password" placeholder="Enter password" required>
-    <button onclick="login()">Login</button>
-    <div class="error" id="error"></div>
-    <div class="register-link">
-      Don't have an account? <a href="register.html">Register here</a>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login to EduPortal</h2>
+      <input type="text" id="username" placeholder="Enter username" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button onclick="login()">Login</button>
+      <div class="error" id="error"></div>
+      <div class="register-link">
+        Don't have an account? <a href="register.html">Register here</a>
+      </div>
     </div>
   </div>
-<footer>
+  <footer>
     <div class="footer-container">
       <div class="footer-column">
         <h3>Contact Us</h3>
         <p>Email: dhairyadave433@gmail.com</p>
         <p>GitHub: <a href="https://github.com/DhairyaDave08" target="_blank">DhairyaDave08</a></p>
       </div>
-      
       <div class="footer-column">
         <h3>EduPortal</h3>
         <p>Empowering JEE Aspirants</p>
         <p style="margin-top: 20px;">&copy; 2025 EduPortal. All Rights Reserved.</p>
       </div>
     </div>
-  </footer>s
+  </footer>
   <script>
     function login() {
       let username = document.getElementById("username").value;
@@ -47,4 +48,5 @@
     }
   </script>
 </body>
+
 </html>
