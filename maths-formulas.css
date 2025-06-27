@@ -3,8 +3,8 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
            background: linear-gradient(to bottom right, #f7971e, #ffd200); /* Energizing warm yellow */
-
-      color: white;
+      overflow-x: hidden;
+        color: white;
       padding: 90px 20px 40px;
     }
     h1 {
@@ -67,3 +67,32 @@
       background: rgba(0, 0, 0, 0.1);
       margin-top: 60px;
     }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .flip-card {
+    height: 160px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  footer {
+    padding: 15px 10px;
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
