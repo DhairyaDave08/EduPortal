@@ -1,4 +1,4 @@
- * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -180,17 +180,19 @@
     }
 
     footer {
-  width: 100%;
-  overflow-x: hidden;
-}
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-footer .footer-container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-
+    footer .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
     footer h3 {
       font-size: 20px;
